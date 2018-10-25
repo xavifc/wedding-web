@@ -1,0 +1,71 @@
+{
+	"subtitle": "Nos casamos!",
+	"faq": {
+		"when": {
+			"title": "Cuándo?",
+			"text": "<strong>Sábado, 23 de Septiembre, 2017</strong><br />Todo empieza a las <strong>16:30</strong> con la ceremonia!"
+		},
+		"where": {
+			"title": "Dónde?",
+			"text": "<strong>Masia Mas Badó</strong><br />A las afueras del pueblo de <strong>Sant Quirze Safaja</strong>",
+			"address": "Camí de L'Oller del Mas Badó, 1<br />08189 Sant Quirze Safaja"
+		},
+		"who": {
+			"title": "Quién?",
+			"text": "Nosotros pues..."
+		},
+		"why": {
+			"title": "Porqué?",
+			"text": "Por muchos motivos:<ul><li>por la fiesta</li><li><strong>porque nos queremos</strong></li><li>y por la fiesta! <span class=\"emoticon\">;)</span></li></ul>"
+		},
+		"how": {
+			"title": "Cómo?",
+			"text": "Por todo lo alto!<br />Dress code: <strong>elegantico</strong>"
+		},
+		"what": {
+			"title": "Qué?",
+			"text": "Que sí! En serio! Que nos casamos!"
+		},
+		"register": {
+			"title": "Cómo apuntarse?",
+			"text": "Para confirmar asistencia hay que rellenar este pequeño formulario o enviar un correo a <a href=\"mailto:bodaladyjordi@gmail.com\">bodaladyjordi@gmail.com</a>!",
+			"form": {
+				"who": "Nombre y apellidos",
+				"with": "Acompañante/s",
+				"why": "Comentarios",
+				"send": "Enviar",
+				"ok": "Listo! Ahí nos vemos",
+				"ko": "Ha ocurrido un problema... Vuelve a intentarlo más tarde o envianos un correo a <a href=\"mailto:bodaladyjordi@gmail.com\">bodaladyjordi@gmail.com</a>",
+				"loading": "Guardando..."
+			}
+		},
+		"go": {
+			"title": "Cómo llegar?",
+			"text": "Desde..."
+		},
+		"money": {
+			"title": "Qué regalar?",
+			"text": "Tres cosas hay en la vida: salud, dinero y amor. Afortunadamente nos sobra salud y amor.<br />Para lo demás se puede colaborar:"
+		},
+		"sleep": {
+			"title": "Dónde dormir?",
+			"text": "La boda se celebrará en una casa de colonias, por lo que todos los que lo deseen se pueden quedar a dormir.<br />Son habitaciones de 6 personas con literas y con baño.<br />En la dormida se incluye el desayuno.",
+			"price": "Los precios son:<ul><li>Adultos: Dormir + Desayuno = 30€</li><li>Ni&ntilde;os: Dormir + Desayuno = 20€</li></ul>",
+			"booking": "Para reservar hay que hacer el ingreso en la cuenta:",
+			"alert": "Importante indicar nombres!"
+		},
+		"more": {
+			"title": "Algo más?",
+			"wedshoots": "Hoy en día todo el mundo hace fotos con los teléfonos móviles, y así lo queremos también en nuestra boda.<br />Recopilaremos mucho más fácil todas las fotos si se hacen con la aplicación:",
+			"download": "Descárgala para tu teléfono:",
+			"available": "Disponible para",
+			"code": "Código del álbum: <strong class=\"emoticon\">ES71f8efa2</strong>",
+			"prize": "Además el que haga más fotos (buenas) recibirá un obsequio!",
+			"challenge": "Y prepárate! Habrá un pequeño concurso con premio!"
+		},
+		"help": {
+			"title": "Más?",
+			"text": "Si aún quedan dudas, preguntas, peticiones o comentarios se nos puede contactar por correo electrónico a <a href=\"mailto:bodaladyjordi@gmail.com\">bodaladyjordi@gmail.com</a> o por teléfono a <strong>650380321</strong> o <strong>696994770</strong>"
+		}
+	}
+}

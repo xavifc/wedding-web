@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="wedding">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuri &#9901; Xavi</title>
+    	
+		<meta name="description" content="Boda 23-09-2017 a Masia Mas Badó">
+		<meta property="og:title" content="Lady &#9901; Jordi" />
+		<meta property="og:url" content="http://lady-jordi.com/" />
+		<meta property="og:description" content="Boda 23-09-2017 a Masia Mas Badó">
+		<meta property="og:image" content="http://lady-jordi.com/img/IMG_20161023_180152_xxs.jpg">
+		
+		<script defer src="/__/firebase/5.5.5/firebase-app.js"></script>
+		<script defer src="/__/firebase/5.5.5/firebase-auth.js"></script>
+		<script defer src="/__/firebase/5.5.5/firebase-database.js"></script>
+		<script defer src="/__/firebase/5.5.5/firebase-messaging.js"></script>
+		<script defer src="/__/firebase/5.5.5/firebase-storage.js"></script>
+		<script defer src="/__/firebase/init.js"></script>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.15.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+		<script type="text/javascript" src="js/wedding.module.js"></script>
+		<script type="text/javascript" src="js/main.controller.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Great+Vibes|Marck+Script|Rancho|Elsie" /> 
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+	<body ng-controller="MainController">
+		<div id="flags">
+			<a ng-click="changeLanguage('ca')"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAACG0lEQVQokW3SW0tTAQDA8UMPgSllZeWcuEqXly2dl2nMvOQyFVTykmiOsoQCoaKHIOjrGEISUQQSBEkXutdCSCKKQD3OnbOzc3au27R/L1GJPfy+wU9Yjwb5V/ZjA+n3dTjvarHe1GC+rkZ/6Ud9XknyWQXyvBfpSRmxx4dYeVSCkPlQj5W99tsVrMwUZuYyZnoSw5lAd8ZJ2SNo1iCq1UfS7EYxwsh6K0tzxQixiJuftyJ/3Rxj48YwG9cHWL/aS3aqi8ylDtIXWnAiTdijtVhDfqxIE0nvbgT7bQA9fWYzZ4CU3Ytmd6FaHSTNFhSjiYReh5TyE9eOIGn1fLu/H2F1vIjMZN8W2fOnyIyfID1yHGewEbsvgNXtwwx7MVoPYvT4Ed25CMaro2SU9v9Ky804UiN2PIC15sNc9WKIHvTlInSxgsXZfATxrAt7IrxFOhLCGQ1iD9Vg9Vdh9pRhdHrQ212kmgvQu0sR3dsRtBdVqGb7JkmjGUUPIqcCSJqPuOollvSwqhQhJvaxLOcjyh4WZvIQVsYKyVxs+yN9LoQz1oA9XI11uhKztxSjqwQ97CLVuhcttBPtWC7qSTerhdsQlKflqFY/qtVP0uxBMTpJ6G3IqRCSFiSuBlhTfMSUcsTEYUTZw4pUzJJUSHQ6B0Ge927ZtTRXzI+HLr4/OMDXewV8ubuHxdl8Pt/ZxcJMHp9u7yA6nUN0OodfOhztPQdN+NwAAAAASUVORK5CYII=" /></a>
+			<a ng-click="changeLanguage('es')"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAACRUlEQVQokX3LXywUABzA8V9PPbQePLTmwVZb1liymKVNVAoNTWLFMsZ0E1HXyJ8spib905+R1tYyam1tTVOJ/NlVIioz+R/nzp9zuM6/u3Ocvj245q2Hz+NHrP07sfY6ruveiqXLAUvnZkydG1no2MBcu2D8KhhbBEOzMK0S9E1rxNq7BZvhkV0ptpkSVqbvszJ1l2X9bayTN1jSFbI0UYBl/AqWsRzM2ixMmnTGawWx9jpiM5Rh0xewMpnHsi6X5YkcrOOXWBq7iEWbhlmTjFmtwKSOZ3EohoXBKBZHzjNaLYi12xGbofS/2aQ+w+Lwep4fiGBhOAX1a0FW1Zv4M1vMn5lMVqfTWZ26gE1/jpXJJJZ1iVgn4lgaO41l9CRmTTgm9TEWh49i0saj+yCIw4kiHr5pI7+ikdynDWQ/qSPj8XuUZe9ILakm6V4ViXdeEXfzJTGFL4gqeE5EXiUpD6oQOYKIWwWXK/uILf5B9K1vRBa1cfxaKyH5XwjI/czB7I/4ZDSxV9mIR1o9u5PrcFHUEJirQkSBiHM5meU9a/l6G2FXWwn+l7NU9tzAntR63M7W4qKoYUfCWw5nNyGSiHSIoFcqGQ0PRxsaykhQEGp/f4Z8ffnl7c2Apyd97u70uLrS7ezMz+3b6HJyos/Pj2ciiFEEiyIeS0IM5thTmKIjWYgMYz4smPmQAOYCDzHrvx/jgX389vHC4O2BwcudGc9ddIogGhGGRBgUoV+EXhG6RegSoUOE7yK0i9Bi1yyCyu6TCH8BiHfZrOFKFoIAAAAASUVORK5CYII=" /></a>
+		</div>
+		<div class="container">
+			<div id="title" class="content">
+				<div class="content_wrap">
+					<div class="subcontent">
+						<h1>Lady & Jordi</h1>
+						<div class="underline"></div>
+						<h4 translate="subtitle"></h4>
+					</div>
+				</div>
+				<img id="flowers1" src="img/flowers1.png" />
+				<img id="flowers2" src="img/flowers2.png" />
+				<img id="flowers3" src="img/flowers3.png" />
+			</div>
+			<div id="faq" class="content">
+				<div class="content_wrap">
+					<div class="subcontent">
+						<h2>FAQ</h2>
+					</div>
+					<div id="when" class="subcontent">
+						<h3 translate="faq.when.title"></h3>
+						<p translate="faq.when.text"></p>
+					</div>
+					<div id="where" class="subcontent">
+						<h3 translate="faq.where.title"></h3>
+						<p translate="faq.where.text"></p>
+						<p class="address" translate="faq.where.address"></p>
+						<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCxqH0lQTBBPr5eo2CUBLHwGBWSLAp2WgA&q=Masia+Mas+Bado&zoom=10"></iframe>
+					</div>
+					<div id="who" class="subcontent">
+						<h3 translate="faq.who.title"></h3>
+						<p translate="faq.who.text"></p>
+					</div>
+					<div id="why" class="subcontent">
+						<h3 translate="faq.why.title"></h3>
+						<p translate="faq.why.text"></p>
+					</div>
+					<div id="how" class="subcontent">
+						<h3 translate="faq.how.title"></h3>
+						<p translate="faq.how.text"></p>
+					</div>
+					<div id="what" class="subcontent">
+						<h3 translate="faq.what.title"></h3>
+						<p translate="faq.what.text"></p>
+					</div>
+					<div id="register" class="subcontent">
+						<h3 translate="faq.register.title"></h3>
+						<p translate="faq.register.text"><p>
+						<p translate="faq.register.form.ok" ng-show="sended.ok"></p>
+						<p translate="faq.register.form.ko" ng-show="sended.ko"></p>
+						<p translate="faq.register.form.loading" ng-show="sended.loading"></p>
+						<form name="confirmForm" ng-hide="sended.ok || sended.loading">
+							<input type="text" name="who" class="form-control" placeholder="{{ 'faq.register.form.who' | translate }}" ng-model="confirmation.who" required maxlength="255" />
+							<input type="text" name="with" class="form-control" placeholder="{{ 'faq.register.form.with' | translate }}" ng-model="confirmation.with" maxlength="255" />
+							<input type="text" name="why" class="form-control" placeholder="{{ 'faq.register.form.why' | translate }}" ng-model="confirmation.why" maxlength="255" />
+							<button type="button" class="btn btn-default btn-block" translate="faq.register.form.send" ng-click="sendConfirmation()"></button>
+						</form>
+					</div>
+					<div id="go" class="subcontent">
+						<h3 translate="faq.go.title"></h3>
+						<p translate="faq.go.text"></p>
+						<div class="row">
+							<div class="col-xs-4"><a href="https://goo.gl/maps/fec9wKypR9M2" target="_blank"><img src="img/barcelona.png" />Barcelona</a></div>
+							<div class="col-xs-4"><a href="https://goo.gl/maps/KasTe2t9uX92" target="_blank"><img src="img/tremp.png" />Tremp</a></div>
+							<div class="col-xs-4"><a href="https://www.edreams.es/travel/#/results/type=R;dep=2017-09-22;from=BOG;to=BCN;ret=2017-09-24" target="_blank"><img class="from" src="img/colombia.png" />Colombia</a></div>
+						</div>
+					</div>
+					<div id="money" class="subcontent">
+						<h3 translate="faq.money.title"></h3>
+						<p translate="faq.money.text"></p>
+						<dl>
+							<dt>CaixaBank</dt>
+							<dd>ES15 2100 3206 6222 0062 2148</dd>
+							<dt>Bancolombia</dt>
+							<dd>154-786123-78</dd>
+						</dl>
+					</div>
+					<div id="sleep" class="subcontent">
+						<h3 translate="faq.sleep.title"></h3>
+						<p translate="faq.sleep.text"></p>
+						<p translate="faq.sleep.price"></p>
+						<p translate="faq.sleep.booking"></p>
+						<dl>
+							<dt>Banc Sabadell</dt>
+							<dd>ES20 0081 0665 3200 0126 8836</dd>
+						</dl>
+						<p class="alert" translate="faq.sleep.alert"></p>
+					</div>
+					<div id="more" class="subcontent">
+						<h3 translate="faq.more.title"></h3>
+						<p translate="faq.more.wedshoots"></p>
+						<img class="wedshoots" src="img/wedshoots.png" />
+						<p translate="faq.more.download"></p>
+						<a target="_blank" href="https://play.google.com/store/apps/details?id=net.bodas.android.wedshoots" class="store android"><span translate="faq.more.available"></span></a>
+						<a target="_blank" href="https://itunes.apple.com/es/app/id660256196?mt=8" class="store apple"><span translate="faq.more.available"></span></a>
+						<p translate="faq.more.code"></p>
+						<p translate="faq.more.prize"></p>
+						<p class="alert" translate="faq.more.challenge"></p>
+					</div>
+					<div id="help" class="subcontent">
+						<h3 translate="faq.help.title"></h3>
+						<p translate="faq.help.text"></p>
+					</div>
+				</div>
+				<img id="flowers4" src="img/flowers4.png" />
+				<img id="flowers5" src="img/flowers5.png" />
+				<img id="flowers6" src="img/flowers6.png" />
+				<img id="flowers7" src="img/flowers7.png" />
+			</div>
+		</div>
+		<div id="background"></div>
+		<div id="loading" ng-hide="loaded"></div>
+	</body>
+</html>

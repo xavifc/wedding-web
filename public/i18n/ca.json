@@ -1,0 +1,71 @@
+{
+	"subtitle": "Ens casem!",
+	"faq": {
+		"when": {
+			"title": "Quan?",
+			"text": "<strong>Dissabte, 23 de Setembre, 2017</strong><br />Tot comença a les <strong>16:30</strong> amb la cerimònia!"
+		},
+		"where": {
+			"title": "On?",
+			"text": "<strong>Masia Mas Badó</strong><br />A les afores del poble de <strong>Sant Quirze Safaja</strong>",
+			"address": "Camí de L'Oller del Mas Badó, 1<br />08189 Sant Quirze Safaja"
+		},
+		"who": {
+			"title": "Qui?",
+			"text": "Doncs nosaltres..."
+		},
+		"why": {
+			"title": "Per què?",
+			"text": "Per molts motius:<ul><li>per la festa</li><li><strong>perquè ens estimem</strong></li><li>i per la festa! <span class=\"emoticon\">;)</span></li></ul>"
+		},
+		"how": {
+			"title": "Com?",
+			"text": "Sense estar-se de res!<br />Dress code: <strong>elegantico</strong>"
+		},
+		"what": {
+			"title": "Que?",
+			"text": "Que sí! De debò! Que ens casem!"
+		},
+		"register": {
+			"title": "Com apuntar-se?",
+			"text": "Per confirmar assistència s'ha d'emplenar aquest petit formulari o enviar un correu a <a href=\"mailto:bodaladyjordi@gmail.com\">bodaladyjordi@gmail.com</a>!",
+			"form": {
+				"who": "Nom i cognoms",
+				"with": "Acompanyant/s",
+				"why": "Comentaris",
+				"send": "Enviar",
+				"ok": "Llest! Allà ens veiem!",
+				"ko": "S'ha produït un problema... Torna a intentar-ho més tard o envia'ns un correu a <a href=\"mailto:bodaladyjordi@gmail.com\">bodaladyjordi@gmail.com</a>",
+				"loading": "Guardant..."
+			}
+		},
+		"go": {
+			"title": "Com arribar?",
+			"text": "Des de..."
+		},
+		"money": {
+			"title": "Que regalar?",
+			"text": "Tres coses hi ha a la vida: salut, diners i amor. Afortunadament ens sobra salut i amor.<br />Per la resta es pot col·laborar:"
+		},
+		"sleep": {
+			"title": "On dormir?",
+			"text": "El casament se celebrarà en una casa de colònies, de manera que tots els que ho desitgin es poden quedar a dormir.<br />Són habitacions de 6 persones amb lliteres i amb bany.<br />Amb la dormida s'inclou l'esmorzar.",
+			"price": "Els preus són:<ul><li>Adults: Dormir + Esmorzar = 30€</li><li>Nens: Dormir + Esmorzar = 20€</li></ul>",
+			"booking": "Per reservar cal fer l'ingrés al compte:",
+			"alert": "Important indicar noms!"
+		},
+		"more": {
+			"title": "Algo més?",
+			"wedshoots": "Avui en dia tothom fa fotos amb els telèfons mòbils, i així ho volem també al nostre casament.<br />Recopilarem molt més fàcil totes les fotos si es fan amb l'aplicació:",
+			"download": "Descarrega-la per al teu telèfon:",
+			"available": "Disponible per a",
+			"code": "Codi de l'àlbum: <strong class=\"emoticon\">ES71f8efa2</strong>",
+			"prize": "A més el que faci més fotos (bones) rebrà un obsequi!",
+			"challenge": "I prepara't! Hi haurà un petit concurs amb premi!"
+		},
+		"help": {
+			"title": "Més?",
+			"text": "Si encara queden dubtes, preguntes, peticions o comentaris se'ns pot contactar per correu electrònic a <a href=\"mailto:bodaladyjordi@gmail.com\">bodaladyjordi@gmail.com</a> o per telèfon a <strong>650380321</strong> o <strong>696994770</strong>"
+		}
+	}
+}
